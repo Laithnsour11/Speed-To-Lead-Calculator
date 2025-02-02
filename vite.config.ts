@@ -5,13 +5,20 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'development' ? '/' : './',
+  base: mode === 'development' ? '/' : '/lead-velocity-calculator/',
   server: {
     host: "::",
     port: 8080,
   },
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   },
   plugins: [
     react(),
