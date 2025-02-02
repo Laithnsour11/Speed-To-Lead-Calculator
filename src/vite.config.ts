@@ -12,6 +12,13 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'dist',
+    emptyOutDir: true,
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
   },
   plugins: [
     react(),
