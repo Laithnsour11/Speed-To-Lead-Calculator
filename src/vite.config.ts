@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
-    outDir: 'dist', // Changed from 'docs' to 'dist' for Vercel compatibility
+    outDir: 'dist',
   },
   plugins: [
     react(),
